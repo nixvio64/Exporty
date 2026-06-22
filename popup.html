@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exporty</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-left">
+        <img src="exporty.png" alt="" class="header-icon">
+        <h1 class="header-title">Exporty</h1>
+      </div>
+      <button id="themeToggle" class="theme-toggle" title="Theme: AUTO (click to cycle)">
+        <span id="themeLabel">LIGHT</span>
+      </button>
+    </header>
+
+    <div id="channelCard" class="channel-card hidden">
+      <img id="channelIcon" class="channel-avatar" alt="" style="display:none" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%23a8a29e%22 width=%22100%22 height=%22100%22 rx=%2250%22/><text x=%2250%22 y=%2268%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2250%22 font-family=%22sans-serif%22>?</text></svg>'">
+      <div class="channel-info">
+        <div id="serverName" class="channel-server"></div>
+        <div id="channelName" class="channel-name"></div>
+      </div>
+    </div>
+
+    <div id="errorCard" class="error-card hidden">
+      <span id="errorText"></span>
+    </div>
+
+    <div id="controls" class="controls hidden">
+      <div class="form-group">
+        <label class="form-label">File Format</label>
+        <select id="formatSelect" class="form-select">
+          <option value="0">TXT</option>
+          <option value="1">CSV</option>
+          <option value="2">JSON</option>
+          <option value="3">HTML</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Time Range</label>
+        <div class="date-range">
+          <input type="datetime-local" id="dateStart" class="form-input">
+          <span class="date-sep">to</span>
+          <input type="datetime-local" id="dateEnd" class="form-input">
+        </div>
+      </div>
+
+      <button id="exportBtn" class="export-btn">Export</button>
+
+      <div id="progressWrap" class="progress-wrap hidden">
+        <div class="progress-track">
+          <div id="progressBar" class="progress-bar" style="width:0%"></div>
+        </div>
+        <span id="progressText" class="progress-text">0%</span>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <a class="footer-credit" href="https://github.com/nixvio64/" target="_blank">made by <strong>nixvio64</strong></a>
+      <span class="footer-attribution">
+        <a href="https://www.flaticon.com/free-icons/export" title="export icons" target="_blank">Export icons created by Iconify Designs - Flaticon</a>
+      </span>
+    </footer>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Exporty",
+  "version": "1.0.0",
+  "description": "Export Discord chat logs to CSV, HTML, JSON, and TXT fast, local, and unlimited and for free",
+  "author": "nixvio64",
+  "icons": {
+    "16": "exporty.png",
+    "48": "exporty.png",
+    "128": "exporty.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "exporty.png"
+  },
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://discord.com/*", "https://*.discord.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

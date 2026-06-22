@@ -1,6 +1,6 @@
 # Exporty
 
-Export Discord chat logs to CSV, HTML, JSON, and TXT fast, local, and unlimited and for free.
+Export Discord chat logs to CSV, HTML, JSON, and TXT fast, local, unlimited and for free.
 
 ## Features
 
